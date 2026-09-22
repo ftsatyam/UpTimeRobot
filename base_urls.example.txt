@@ -7,3 +7,5 @@ https://your-app.onrender.com
 https://yourdomain.com
 
 Note - The example URLs in base_urls.txt should be removed and replaced with your own URLs.
+
+Also you can create any .txt file in the root directory and add one app base URL per line.
