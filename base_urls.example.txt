@@ -1,11 +1,18 @@
-Add one Render/Koyeb/other app base URL per line here.
+Add your app base URLs here, one URL per line.
 
-example 
+Example:
 
 https://your-app.koyeb.app
 https://your-app.onrender.com
 https://yourdomain.com
 
-Note - The example URLs in base_urls.txt should be removed and replaced with your own URLs.
+Note:
+This is an example file and will not be loaded automatically.
 
-Also you can create any .txt file in the root directory and add one app base URL per line.
+Before deployment, either rename this file to other name
+(for example, base_urls.txt) or create a new .txt file in
+the root directory and add your own app URLs.
+
+You can create multiple .txt files if needed.
+The app will automatically read all .txt files in the root
+directory and ping every valid URL starting with http:// or https://.
