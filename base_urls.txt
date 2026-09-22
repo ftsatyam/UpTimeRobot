@@ -1,9 +1,9 @@
-"""
-Add one Render/Koyeb/other app base URL per line.
+Add one Render/Koyeb/other app base URL per line here.
 
-example -
+example 
 
 https://your-app.koyeb.app
 https://your-app.onrender.com
 https://yourdomain.com
-"""
+
+Note - The example URLs in base_urls.txt should be removed and replaced with your own URLs.
