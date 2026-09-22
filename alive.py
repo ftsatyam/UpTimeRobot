@@ -2,6 +2,7 @@ import asyncio
 import os
 import time
 from datetime import datetime, timezone
+from pathlib import Path
 
 from aiohttp import ClientSession, ClientTimeout, web
 
@@ -16,6 +17,27 @@ REQUEST_TIMEOUT = int(os.getenv("REQUEST_TIMEOUT", 10))
 
 START_TIME = time.monotonic()
 
+
+def load_endpoints():
+    endpoints = list(ENDPOINTS)
+
+    for txt_file in Path(".").glob("*.txt"):
+        try:
+            with txt_file.open("r", encoding="utf-8") as file:
+                for line in file:
+                    url = line.strip()
+
+                    if url and url.startswith(("http://", "https://")):
+                        endpoints.append(url)
+
+        except OSError as error:
+            print(f"[ERROR] Failed to read {txt_file}: {error}")
+
+    return list(dict.fromkeys(endpoints))
+
+
+ALL_ENDPOINTS = load_endpoints()
+
 endpoint_status = {
     url: {
         "status": "pending",
@@ -26,7 +48,7 @@ endpoint_status = {
         "failure_count": 0,
         "error": None,
     }
-    for url in ENDPOINTS
+    for url in ALL_ENDPOINTS
 }
 
 
@@ -52,7 +74,7 @@ async def _start_web():
             "status": "healthy" if healthy else "degraded",
             "service": "Uptime Robot",
             "uptime_seconds": uptime(),
-            "endpoint_count": len(ENDPOINTS),
+            "endpoint_count": len(ALL_ENDPOINTS),
             "ping_interval_seconds": PING_TIME,
             "request_timeout_seconds": REQUEST_TIMEOUT,
             "last_checked": max(
@@ -97,9 +119,14 @@ async def _start_web():
     await site.start()
 
     print(f"[INFO] Uptime Robot started on port {PORT}")
-    print(f"[INFO] Monitoring {len(ENDPOINTS)} endpoint(s)")
+    print(f"[INFO] Monitoring {len(ALL_ENDPOINTS)} endpoint(s)")
     print(f"[INFO] Ping interval: {PING_TIME}s")
     print(f"[INFO] Request timeout: {REQUEST_TIMEOUT}s")
+
+    if ALL_ENDPOINTS:
+        for url in ALL_ENDPOINTS:
+            source = "ENDPOINTS" if url in ENDPOINTS else "TXT"
+            print(f"[INFO] Added [{source}] {url}")
 
 
 async def _ping():
@@ -111,7 +138,7 @@ async def _ping():
         while True:
             print("[INFO] Starting health check...")
 
-            for url in ENDPOINTS:
+            for url in ALL_ENDPOINTS:
                 started = time.monotonic()
 
                 try:
@@ -170,7 +197,6 @@ async def _ping():
 
 async def main():
     print("[INFO] Initializing Uptime Robot...")
-
     await asyncio.gather(
         _start_web(),
         _ping(),
