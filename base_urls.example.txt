@@ -1,4 +1,4 @@
-Add your app base URLs here, one URL per line.
+Add your app base URL(s) here, one URL per line.
 
 Example:
 
@@ -9,9 +9,9 @@ https://yourdomain.com
 Note:
 This is an example file and will not be loaded automatically.
 
-Before deployment, either rename this file to other name
+Before deployment, either rename this file to another name
 (for example, base_urls.txt) or create a new .txt file in
-the root directory and add your own app URLs.
+the root directory and add your own app URL(s).
 
 You can create multiple .txt files if needed.
 The app will automatically read all .txt files in the root
