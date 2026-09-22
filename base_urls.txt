@@ -1,0 +1,9 @@
+"""
+Add one Render/Koyeb/other app base URL per line.
+
+example -
+
+https://your-app.koyeb.app
+https://your-app.onrender.com
+https://yourdomain.com
+"""
