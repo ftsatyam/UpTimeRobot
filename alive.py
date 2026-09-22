@@ -17,7 +17,6 @@ REQUEST_TIMEOUT = int(os.getenv("REQUEST_TIMEOUT", 10))
 
 START_TIME = time.monotonic()
 
-
 def load_endpoints():
     endpoints = list(ENDPOINTS)
 
@@ -27,15 +26,14 @@ def load_endpoints():
                 for line in file:
                     url = line.strip()
 
-                    if url and url.startswith(("http://", "https://")):
+                    if url.startswith(("http://", "https://")):
                         endpoints.append(url)
 
         except OSError as error:
             print(f"[ERROR] Failed to read {txt_file}: {error}")
 
     return list(dict.fromkeys(endpoints))
-
-
+    
 ALL_ENDPOINTS = load_endpoints()
 
 endpoint_status = {
