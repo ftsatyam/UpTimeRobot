@@ -8,8 +8,7 @@
 
 **It periodically sends requests to your configured app URLs to keep them active and provides a simple web API for monitoring their status.**
 
-<details>
-  <summary><strong>Features</strong></summary>
+## Features
 
 - **Automatic endpoint health checks**
 - **Configurable ping interval**
@@ -20,21 +19,7 @@
 - **One-click deployment support**
 - **Lightweight and easy to self-host**
 
-</details>
-
-<details>
-  <summary><strong>Variables</strong></summary>
-
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `PORT` | `8080` | Web server port |
-| `PING_TIME` | `300` | Health check interval in seconds |
-| `REQUEST_TIMEOUT` | `10` | Request timeout in seconds |
-
-</details>
-
-<details>
-  <summary><strong>Configuration</strong></summary>
+## Configuration
 
 You can add URLs directly to `alive.py`:
 
@@ -55,6 +40,15 @@ https://yourdomain.com
 The application automatically scans all `.txt` files in the root directory and adds every valid `http://` or `https://` URL.
 
 Both methods can be used together.
+
+<details>
+  <summary><strong>Variables</strong></summary>
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `PORT` | `8080` | Web server port |
+| `PING_TIME` | `300` | Health check interval in seconds |
+| `REQUEST_TIMEOUT` | `10` | Request timeout in seconds |
 
 </details>
 
@@ -113,8 +107,6 @@ Returns service information and overall monitoring status.
 
 </details>
 
-</details>
-
 <details>
   <summary><strong>VPS / Locally</strong></summary>
 
@@ -126,6 +118,8 @@ python alive.py
 ```
 
 The web server will start on the port specified by `PORT`.
+
+</details>
 
 </details>
 
