@@ -124,11 +124,17 @@ The web server will start on the port specified by `PORT`.
 </details>
 
 <details>
-  <summary><strong>Author</strong></summary>
+  <summary><strong>Disclaimer</strong></summary>
 
-**TheZake**
-
-- GitHub: https://github.com/ImKrishana
-- Telegram: https://t.me/TheZake
+This bot is developed strictly for **educational and research purposes only**.
 
 </details>
+
+---
+
+[![License](https://img.shields.io/github/license/ImKrishana/UpTimeRobot)](https://github.com/ImKrishana/UpTimeRobot/blob/main/LICENSE)
+[![Telegram](https://img.shields.io/badge/Telegram-26A5E4?logo=telegram&logoColor=white)](https://t.me/LeechBots)
+
+If you like this project, don't forget to give it a Star !
+
+**Developer:** [The Zake](https://t.me/TheZake)
