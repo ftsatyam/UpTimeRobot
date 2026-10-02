@@ -6,15 +6,15 @@
 
 ## Features
 
-**- Automatic endpoint health checks**
-**- Configurable ping interval**
-**- Response time tracking**
-**- Endpoint status and statistics**
-**- Simple health/status API**
-**- Supports multiple `.txt` files for URLs**
-**- One-click deployment support**
-**- Lightweight and easy to self-host**
-
+- **Automatic endpoint health checks**
+- **Configurable ping interval**
+- **Response time tracking**
+- **Endpoint status and statistics**
+- **Simple health/status API**
+- **Supports multiple `.txt` files for URLs**
+- **One-click deployment support**
+- **Lightweight and easy to self-host**
+- 
 ## Variables
 
 | Variable | Default | Description |
