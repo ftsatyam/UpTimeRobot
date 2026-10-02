@@ -1,19 +1,19 @@
 # UpTimeRobot
 
-Lightweight uptime and keep-alive service for Render, Koyeb, Heroku and other web apps.
+**Lightweight uptime and keep-alive service designed to help prevent free-tier apps on platforms like Render, Koyeb, Heroku and other hosting services from going idle or sleeping.**
 
-It periodically sends requests to your configured app URLs and provides a simple web dashboard/API for monitoring their status.
+**It periodically sends requests to your configured app URLs to keep them active and provides a simple web API for monitoring their status.**
 
 ## Features
 
-- Automatic endpoint health checks
-- Configurable ping interval
-- Response time tracking
-- Endpoint status and statistics
-- Simple health/status API
-- Supports multiple `.txt` files for URLs
-- One-click deployment support
-- Lightweight and easy to self-host
+**- Automatic endpoint health checks**
+**- Configurable ping interval**
+**- Response time tracking**
+**- Endpoint status and statistics**
+**- Simple health/status API**
+**- Supports multiple `.txt` files for URLs**
+**- One-click deployment support**
+**- Lightweight and easy to self-host**
 
 ## Variables
 
