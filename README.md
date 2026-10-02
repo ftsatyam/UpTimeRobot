@@ -1,7 +1,6 @@
 <p align="center">
-  <img src="colored_logo.svg" alt="UpTimeRobot logo" width="300">
+  <img src="z.svg" alt="UpTimeRobot logo" width="300">
 </p>
-
 # UpTimeRobot
 
 **Lightweight uptime and keep-alive service designed to help prevent free-tier apps on platforms like Render, Koyeb, Heroku and other hosting services from going idle or sleeping.**
