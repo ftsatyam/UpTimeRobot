@@ -1,13 +1,15 @@
 <p align="center">
   <img src="z.svg" alt="UpTimeRobot logo" width="300">
 </p>
+
 # UpTimeRobot
 
 **Lightweight uptime and keep-alive service designed to help prevent free-tier apps on platforms like Render, Koyeb, Heroku and other hosting services from going idle or sleeping.**
 
 **It periodically sends requests to your configured app URLs to keep them active and provides a simple web API for monitoring their status.**
 
-## Features
+<details>
+  <summary><strong>Features</strong></summary>
 
 - **Automatic endpoint health checks**
 - **Configurable ping interval**
@@ -17,8 +19,11 @@
 - **Supports multiple `.txt` files for URLs**
 - **One-click deployment support**
 - **Lightweight and easy to self-host**
-  
-## Variables
+
+</details>
+
+<details>
+  <summary><strong>Variables</strong></summary>
 
 | Variable | Default | Description |
 |----------|---------|-------------|
@@ -26,7 +31,10 @@
 | `PING_TIME` | `300` | Health check interval in seconds |
 | `REQUEST_TIMEOUT` | `10` | Request timeout in seconds |
 
-## Configuration
+</details>
+
+<details>
+  <summary><strong>Configuration</strong></summary>
 
 You can add URLs directly to `alive.py`:
 
@@ -48,7 +56,10 @@ The application automatically scans all `.txt` files in the root directory and a
 
 Both methods can be used together.
 
-## API
+</details>
+
+<details>
+  <summary><strong>API</strong></summary>
 
 ### Health Check
 
@@ -74,7 +85,12 @@ Returns the current status of all monitored endpoints, including response time, 
 
 Returns service information and overall monitoring status.
 
-## Deployment
+</details>
+
+<details>
+  <summary><strong>Deployment</strong></summary>
+
+<br>
 
 <details>
   <summary><strong>Render (One-Click Deploy)</strong></summary>
@@ -97,7 +113,10 @@ Returns service information and overall monitoring status.
 
 </details>
 
-## VPS / Locally
+</details>
+
+<details>
+  <summary><strong>VPS / Locally</strong></summary>
 
 ```bash
 git clone https://github.com/ImKrishana/UpTimeRobot.git
@@ -108,10 +127,14 @@ python alive.py
 
 The web server will start on the port specified by `PORT`.
 
-## Author
+</details>
+
+<details>
+  <summary><strong>Author</strong></summary>
 
 **TheZake**
 
 - GitHub: https://github.com/ImKrishana
 - Telegram: https://t.me/TheZake
-- 
+
+</details>
